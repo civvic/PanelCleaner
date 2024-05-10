@@ -167,4 +167,8 @@ cython_debug/
 .idea/
 
 *.sh
-_testbed/cleaner/
+
+.DS_Store
+_testbed/media/**
+_testbed/cleaner/**
+_testbed/model/**
