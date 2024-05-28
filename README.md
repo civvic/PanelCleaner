@@ -49,7 +49,7 @@ The two bottom pages are what the program can output: either just the transparen
 
 - Avoids painting over parts of the image that aren't text.
 
-- Inpaints bubbles that can't simply be masked out.
+- Inpaints bubbles (with LaMa machine learning) that can't simply be masked out.
 
 - Ignores bubbles containing only symbols or numbers, as those don't need translation.
 
@@ -72,7 +72,7 @@ The two bottom pages are what the program can output: either just the transparen
 
 - Can also run OCR on the pages and output the text to a file.
 
-- Interface available in: English, German (See [Translating](https://github.com/VoxelCubes/PanelCleaner/blob/master/translations/TRANSLATING.md) for more languages)
+- Interface available in: English, German, Bulgarian (See [Translating](https://github.com/VoxelCubes/PanelCleaner/blob/master/translations/TRANSLATING.md) for more languages)
 
 
 ## Limitations
@@ -263,8 +263,12 @@ Follow the instructions below to install Tesseract on your system.
 
 #### Windows
 
-1. Download the installer from the [official Tesseract GitHub repository](https://github.com/tesseract-ocr/tesseract/wiki).
-2. Run the installer and follow the on-screen instructions.
+1. Download the installer from the [official Tesseract GitHub repository](https://github.com/tesseract-ocr/tessdoc?tab=readme-ov-file#releases-and-changelog).
+We recommend getting the latest version from UB Mannheim linked there (64 bit).
+2. Run the installer and follow the on-screen instructions for a system-wide installation.
+3. Add the Tesseract installation directory to your PATH environment variable.
+If you did the system-wide installation, this will mean adding the directory `C:\Program Files\Tesseract-OCR` [to your PATH](https://www.computerhope.com/issues/ch000549.htm).
+4. Restart your computer.
 
 #### macOS
 
