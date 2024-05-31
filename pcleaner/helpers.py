@@ -4,7 +4,7 @@ from enum import Enum
 import subprocess
 from itertools import takewhile, groupby
 from pathlib import Path
-import PySide6.QtCore as Qc
+# import PySide6.QtCore as Qc
 
 import tifffile
 from loguru import logger
@@ -19,7 +19,11 @@ def tr(
     """
     Translate a string to the current locale.
     """
-    return Qc.QCoreApplication.translate(context, text, disambiguation, count)
+    try:
+        import PySide6.QtCore as Qc
+        return Qc.QCoreApplication.translate(context, text, disambiguation, count)
+    except Exception: pass
+    return text
 
 
 def f_plural(value, singular: str, plural: str) -> str:
